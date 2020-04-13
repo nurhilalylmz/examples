@@ -19,9 +19,9 @@ public class BaseCalculate {
         return Math.PI * radius * radius;
     }
 
-    public static double calculateSumOddNumbers(double valueN) {
-        double total = 0;
-        for (double i = 1; i <= valueN; i += 2) {
+    public static int calculateSumOddNumbers(int valueN) {
+        int total = 0;
+        for (int i = 1; i <= valueN; i += 2) {
             total += i;
         }
         return total;
