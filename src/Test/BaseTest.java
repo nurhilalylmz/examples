@@ -50,13 +50,14 @@ public class BaseTest {
     }
 
     public void emptyValue() {
-        System.out.println("Entered a null value.");
+        System.out.println("Entered a null value.\n");
     }
 
     public void wrongChoiceMenuMessage() {
         System.out.println("Make sure you entered the correct code!");
     }
-    public void lessZeroMessage(){
+
+    public void lessZeroMessage() {
         System.out.println("The number is less than 0. Transaction cannot be done.");
     }
 }

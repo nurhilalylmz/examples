@@ -30,10 +30,8 @@ public class CalculateCircle {
         double number = Double.parseDouble(value);
         double area = BaseCalculate.calculateArea(number);
         double circle = BaseCalculate.calculateCircle(number);
-        NumberFormat formatter = new DecimalFormat("#0.00");
-        System.out.println("Area: " + formatter.format(area));
-        System.out.println("Circle: " + formatter.format(circle));
-
+        BaseCalculate.refactorFormatter("Area: ", area);
+        BaseCalculate.refactorFormatter("Circle: ", circle);
     }
 }
 

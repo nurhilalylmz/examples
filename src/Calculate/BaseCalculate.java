@@ -1,5 +1,8 @@
 package Calculate;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class BaseCalculate {
     public static double calculateTotal(double valueN) {
         double total = 0;
@@ -34,14 +37,19 @@ public class BaseCalculate {
         if (value1 < 0) {
             return -calculateMultiplication(-value1, value2);
         }
-        if (value1 < 0&&value2<0) {
+        if (value1 < 0 && value2 < 0) {
             return -calculateMultiplication(-value1, -value2);
         }
         if (value2 < 0) {
             return -calculateMultiplication(value1, -value2);
         }
-        double result= Math.exp(Math.log(value1) + Math.log(value2));
+        double result = Math.exp(Math.log(value1) + Math.log(value2));
         return result;
+    }
+
+    public static void refactorFormatter(String message, double sayi) {
+        NumberFormat formatter = new DecimalFormat("#0.00");
+        System.out.println(message + formatter.format(sayi));
     }
 }
 
