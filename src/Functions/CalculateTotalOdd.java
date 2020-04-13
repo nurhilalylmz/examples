@@ -13,7 +13,7 @@ public class CalculateTotalOdd {
         System.out.println("Please enter a number:  ");
         String sayi = input.nextLine();
         if (!sayi.isEmpty()) {
-            if (test.isDouble(sayi)) {
+            if (test.isInteger(sayi)) {
                 calculateOddTotal(sayi);
             } else {
                 operation();
@@ -25,8 +25,8 @@ public class CalculateTotalOdd {
 
     }
     public static void calculateOddTotal(String sayi){
-        double value = Double.parseDouble(sayi);
-        double totalValueN = BaseCalculate.calculateSumOddNumbers(value);
+        int value = Integer.parseInt(sayi);
+        int totalValueN = BaseCalculate.calculateSumOddNumbers(value);
         System.out.println("Total: " + totalValueN);
     }
 }
